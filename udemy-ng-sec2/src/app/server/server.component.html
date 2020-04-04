@@ -1,0 +1,19 @@
+<!-- <p>The Server Component</p> -->
+
+<!-- String Interpolation: -->
+<!-- <p>Server with ID is ____________ </p> -->
+<!-- <p>Server with ID {{ serverId }} is ___ </p> -->
+<!-- <p>{{ 'Server' }} with ID {{ serverId }} is {{ serverStatus }} </p> -->
+<!-- <p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p> -->
+
+<!-- attribute directive: -->
+<!-- The [] mean we are binding to a property of the directive! -->
+<!-- <p [ngStyle]="{backgroundColor: getColor()}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p> -->
+
+<!-- ngClass applies CSS classes dynamically with a javascript object -->
+<!-- ngClass also only works properly with property binding -->
+<!-- if your style or class name has a dash in it, you have to wrap the command in quotes! -->
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{online: serverStatus === 'online'}">{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }} </p>
+
+<!-- Property Binding: -->

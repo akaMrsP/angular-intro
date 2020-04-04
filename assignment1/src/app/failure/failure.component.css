@@ -1,0 +1,11 @@
+body {
+    background-color: paleturquoise;
+    border: 1px solid blue;
+}
+
+h1 {
+    background-color: mistyrose;
+    border: 1px solid red;
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,9 @@
+<div>
+    <button class="btn btn-primary" (click)="onUpdateVisibility()">Display Details</button>
+    <p *ngIf="isVisibleText">display works!</p>
+    <p> Button has been clicked {{ numClicks }} times!</p>
+    <!-- <li [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{postFive: listItem > 5}" *ngFor="let time of clickTime">{{ time }}</li> -->
+    <!-- <app-display-item *ngFor="let time of clickTime">{{ time }}></app-display-item> -->
+    <p [ngStyle]="{backgroundColor: i > 3 ? 'blue' : ''}"  
+        [ngClass]="{postFive: i > 3 }" *ngFor="let time of clickTime; let i = index">{{i+1}}. {{ time }}</p>
+</div>

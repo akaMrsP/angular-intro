@@ -1,0 +1,10 @@
+body {
+    background-color: lavender;
+    border: 1px solid purple;
+}
+h1 {
+    background-color: palegreen;
+    border: 1px solid green;
+    color: green;
+    font-weight: bold;
+}
