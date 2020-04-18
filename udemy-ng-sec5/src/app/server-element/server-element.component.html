@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+    <!-- *ngFor="let element of serverElements"> -->
+    <!-- <div class="panel-heading">{{ element.name }}</div> -->
+    <div class="panel-heading" #heading>{{ name }}</div>
+    <div class="panel-body">
+        <!-- In the place where I want to render content, use the ng-content directive -->
+        <ng-content></ng-content>
+    </div>
+</div>
