@@ -1,4 +1,13 @@
-<a href="#" class="list-group-item clearfix" (click)="loadRecipeDetail()">
+<!-- load the list of recipes -->
+<!-- <a style="cursor: pointer;" class="list-group-item clearfix" (click)="loadRecipeDetail()"> -->
+<!-- dynamic router link requires the []!
+list is already loaded at /recipes, so we use a relative path
+  id is passed in by recipe-item.ts from recipe-list.html through property binding -->
+<a 
+  style="cursor: pointer;" 
+  [routerLink]="[index]" 
+  routerLinkActive="active"
+  class="list-group-item clearfix">
   <div class="pull-left">
     <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
     <p class="list-group-item-text">{{ recipe.description }}</p>

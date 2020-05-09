@@ -1,9 +1,12 @@
-<app-nav (featureSelected)="onNavigate($event)"></app-nav>
+<!-- This featureSelected listener is a relic of our "old" navigation - we no longer need it!
+<app-nav (featureSelected)="onNavigate($event)"></app-nav> -->
+<app-nav></app-nav>
 <div class="container root">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
-      <app-shop-list *ngIf="loadedFeature !== 'recipe'"></app-shop-list>
+      <!-- <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+      <app-shop-list *ngIf="loadedFeature !== 'recipe'"></app-shop-list> -->
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

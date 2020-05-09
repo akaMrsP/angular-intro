@@ -34,6 +34,13 @@ export class RecipeService {
         return this.recipes.slice();
     }
 
+    getRecipe(index: number) {
+        // get the recipe by index - not a deep copy, so is okay
+        return this.recipes[index];
+        // alternately, get a *copy* of the recipe by index
+        // return this.recipes.slice()[index];
+    }
+
     addIngredientsToShoppingList(ingredients: Ingredient[]) {
         this.shopListService.addIngredients(ingredients);
     }
