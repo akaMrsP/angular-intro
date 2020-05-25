@@ -1,0 +1,17 @@
+.container {
+    background-color: #101342;
+    color: #B46112;
+    font-weight: bold;
+    width: 80vw
+}
+
+.nav {
+    align-items: flex-end;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin-top: auto;
+    margin-right: 20px;
+    /* position: absolute bottom 0; */
+    width: 100%;
+}
