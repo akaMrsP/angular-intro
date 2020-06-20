@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #f0ece8;
+}
+
+h1 {
+    color: #02137E;
+}
+
+h2 {
+    color: #02137E;
+    font-size: 18px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #02137E;
+    font-size: 16px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+img {
+    margin-bottom: 20px;
+}

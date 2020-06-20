@@ -1,0 +1,11 @@
+<div class="row project-list">
+    <div class="col-xs-12">
+      <h2>Project Gallery</h2> 
+      <!-- Add tabs for different categories  -->
+      <app-project 
+        *ngFor="let project of projects; let i = index" 
+        [project]="project"
+        [index]="i">
+      </app-project>
+    </div>
+</div>
