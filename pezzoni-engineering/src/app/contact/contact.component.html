@@ -1,15 +1,16 @@
-<div class="row header">    
-</div>
-<div class="row">
-    <div class="col-xs-3 col-sm-3 col-md-6 col-lg-6">
+<!-- <div class="row header">
+</div> -->
+<br/>
+<div class="row header">
+    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
         <h2>Modesto</h2>
         <p>1150 9th Street, Suite #1415</p>
         <p>Modesto, CA 95354</p>
-        <p>phone: (209) 846-9938</p>
+        <p>phone: (209) 554-4602</p>
     </div>
 
-    <div class="col-xs-9 col-sm-9 col-md-6 col-lg-6 contact-element">
-        <form>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contact">
+        <form (ngSubmit)="onSubmit()" #f="ngForm">
             <div class="row">
                 <div class="col-xs-12">
                     <h2>Contact Form</h2>
@@ -17,36 +18,81 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" class="form-control" placeholder="Name" size="100%">
-                </div>  
+                    <label for="name">Name<span class="requirementIndicator">*</span></label>
+                    <input
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        ngModel
+                        name="name"
+                        placeholder="Name"
+                        size="100%"
+                        required
+                    >
+                </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="email">Email</label>
-                    <input type="text" id="email" class="form-control" placeholder="Email" size="100%">
-                </div>  
+                    <label for="email">Email<span class="requirementIndicator">*</span></label>
+                    <span class="help-block" *ngIf="!email.valid && email.touched">
+                        Please enter a valid email.
+                    </span>
+                    <input
+                        type="text"
+                        id="email"
+                        class="form-control"
+                        ngModel
+                        name="email"
+                        required
+                        email
+                        #email="ngModel"
+                        placeholder="Email"
+                        size="100%"
+                    >
+                </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-xs-12">
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" class="form-control" placeholder="Subject" size="100%">
-                </div>  
+                    <input
+                        type="text"
+                        id="subject"
+                        class="form-control"
+                        ngModel
+                        name="subject"
+                        placeholder="Subject"
+                        size="100%"
+                    >
+                </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-xs-12">
-                    <label for="message">Message</label>
-                    <textarea id="message" class="form-control" rows="12" placeholder="Please include as much detail as possible." cols="100%"></textarea>
-                </div>  
+                    <label for="description">Message<span class="requirementIndicator">*</span></label>
+                    <textarea
+                        id="description"
+                        class="form-control"
+                        ngModel
+                        name="description"
+                        required
+                        rows="12"
+                        placeholder="Please include as much detail as possible."
+                        cols="100%">
+                    </textarea>
+                </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-xs-12">
-                    <button type="submit" class="btn btn-light">Send Message</button>
-                </div>  
+                    <button
+                        type="submit"
+                        class="btn btn-light"
+                        [disabled]="!f.valid">
+                        Send Message
+                    </button>
+                </div>
             </div>
         </form>
     </div>

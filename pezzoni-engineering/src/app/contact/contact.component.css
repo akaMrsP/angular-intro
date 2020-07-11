@@ -1,12 +1,38 @@
 .header {
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+.contact {
+    margin-left: 15px;
 }
 
 input {
     margin-bottom: 20px;
 }
 
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.help-block {
+    margin-bottom: 50px;
+    font-weight: bold;
+    color: red;
+}
+
 button {
     margin-top: 10px;
+}
+
+.requirementIndicator {
+  color: red;
+}
+
+/* Desktop Settings */
+@media screen and (min-width: 575px) {
+    .contact {
+        margin-left: 30px;
+    }
 }

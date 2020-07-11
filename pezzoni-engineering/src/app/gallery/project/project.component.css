@@ -1,0 +1,20 @@
+/* Mobile-First Settings */
+img {
+    min-height: 100%;
+    margin-right: 20px;
+}
+
+.image-container {
+    height: auto;
+}
+
+/* Desktop Settings */
+@media screen and (min-width: 993px) {
+    img {
+        height: 100%;
+    }
+    
+    .image-container {
+        height: 150px;
+    }
+}

@@ -1,5 +1,5 @@
-import { Component, Output } from '@angular/core';
-import { ImageDetail } from './shared/image.model';
+import { Component, OnInit } from '@angular/core';
+import { DataStorageService } from './shared/data-storage.service';
 
 @Component({
   selector: 'app-root',
@@ -7,21 +7,12 @@ import { ImageDetail } from './shared/image.model';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
-  private splashImg: ImageDetail[] = 
-  [
-    new ImageDetail (
-      'KaiserFresno',
-      '/images/home-main-image.jpg',
-      'Kaiser Fresno Medical Center, Fresno CA'
-    ),
-    new ImageDetail (
-      'GammaKnifeSD',
-      '/images/services-main-image.jpg',
-      'Gamma-Knife, Cancer Treatment Facility, San Diego CA'
-    )
-  ];
-
-
+export class AppComponent implements OnInit {
   
+  constructor(private dataStorageService: DataStorageService) {}
+
+  ngOnInit() {
+    this.dataStorageService.fetchProjects().subscribe();
+  }
+
 }

@@ -28,3 +28,13 @@ p {
 img {
     margin-bottom: 20px;
 }
+
+a {    
+    color: #02137E; 
+    cursor: pointer;
+}
+
+a:hover {
+    color: #CC6603;
+    text-decoration: none;
+}

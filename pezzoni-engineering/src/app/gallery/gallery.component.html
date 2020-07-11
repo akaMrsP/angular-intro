@@ -1,7 +1,55 @@
 <div class="row project-list">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <br/>
       <h2>Project Gallery</h2> 
       <!-- Add tabs for different categories  -->
+      <ul class="nav nav-tabs" id="projectTab" role="tablist">
+        <li class="nav-item active" (click)="onSelect('education')" [ngClass]="{active: categorySelected === 'education'}">
+          <a 
+            class="nav-link" 
+            routerLink="/gallery/education" 
+            id="education" 
+            role="tab" 
+            aria-controls="education"
+            aria-selected="true">
+            Education
+          </a>
+        </li>
+        <li class="nav-item" (click)="onSelect('healthcare')" [ngClass]="{active: categorySelected === 'healthcare'}">
+          <a 
+            class="nav-link" 
+            routerLink="/gallery/healthcare" 
+            id="healthcare" 
+            role="tab"
+            aria-controls="healthcare"
+            aria-selected="false">
+            Healthcare
+          </a>
+        </li>
+        <li class="nav-item" (click)="onSelect('civic')" [ngClass]="{active: categorySelected === 'civic'}">
+          <a 
+            class="nav-link" 
+            routerLink="/gallery/civic" 
+            id="civic" 
+            role="tab"
+            aria-controls="civic"
+            aria-selected="false">
+            Civic
+          </a>
+        </li>
+        <li class="nav-item" (click)="onSelect('industrial')" [ngClass]="{active: categorySelected === 'industrial'}">
+          <a 
+            class="nav-link" 
+            routerLink="/gallery/industrial" 
+            id="industrial" 
+            role="tab"
+            aria-controls="industrial"
+            aria-selected="false">
+            Industrial
+          </a>
+        </li>
+      </ul>
+      <br/>
       <app-project 
         *ngFor="let project of projects; let i = index" 
         [project]="project"
